@@ -1,0 +1,11 @@
+%FILES%
+usr/
+usr/lib/
+usr/lib/libblas.so
+usr/lib/libblas.so.3
+usr/lib/libblas.so.3.5.0
+usr/share/
+usr/share/licenses/
+usr/share/licenses/blas/
+usr/share/licenses/blas/LICENSE.blas
+

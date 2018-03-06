@@ -1,0 +1,36 @@
+%NAME%
+avr-libc
+
+%VERSION%
+1.8.0-5.1
+
+%DESC%
+The C runtime library for the AVR family of microcontrollers
+
+%URL%
+http://savannah.nongnu.org/projects/avr-libc/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1390352044
+
+%INSTALLDATE%
+1262308563
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu3@archlinuxarm.org>
+
+%SIZE%
+24725504
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+avr-gcc
+

@@ -1,0 +1,36 @@
+%NAME%
+pacman-mirrorlist
+
+%VERSION%
+20140406-1
+
+%DESC%
+Arch Linux ARM mirror list for use by pacman
+
+%URL%
+http://www.archlinuxarm.org/about/mirrors
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1396846821
+
+%INSTALLDATE%
+1398174799
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+14336
+
+%GROUPS%
+base
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+

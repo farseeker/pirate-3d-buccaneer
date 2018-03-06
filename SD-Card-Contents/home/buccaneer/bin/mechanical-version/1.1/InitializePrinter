@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Define the location of files for the script to initialize
+FIRMWARE_FILE="/home/buccaneer/.firmwareUpdater/firmwareupdater"
+DEFAULT_LOCATION="/home/buccaneer/bin"
+loopCount=0
+
+# clock script
+bash /home/buccaneer/bin/clock.sh &
+
+while true; do
+
+        if [ $loopCount == "20" ]; then
+                echo "Post-boot Error."
+               /usr/bin/lightControl 3
+                exit 1
+        fi
+
+	eeprom_data=$(/usr/bin/ReadID)
+	buccaneerPrivKey=$(echo "$eeprom_data" | grep "Private Key" | cut -d':' -f2 | tr -d ' ')
+	buccaneerMecVer=$(echo "$eeprom_data" | grep "Mechanical Version" | cut -d':' -f2 | tr -d ' ')
+
+	if [[ $buccaneerPrivKey == "" ]]; then
+		loopCount=$((loopCount+1))
+		sleep 0.1
+	else
+		break
+	fi
+done
+
+java -jar /home/buccaneer/bin/key-derivator/current/key-derivator.jar $buccaneerPrivKey > /tmp/buccaneer.id
+bash /home/buccaneer/bin/mechanical-version/current/mechanical-version.sh $buccaneerMecVer > /tmp/buccaneer.mech
+
+if [ $? == "0" ]; then
+	ssid=`cat /tmp/buccaneer.id | grep prettyId | awk '{print $2}'`
+	existing_ssid=`cat /etc/hostname`
+
+	if [ $ssid != $existing_ssid ]; then
+	        
+	        wifiPasswd=`cat /tmp/buccaneer.id | grep wifiPassword | awk '{print $2}'`
+	        echo $wifiPasswd      
+
+	        echo root:$wifiPasswd | chpasswd
+	        sleep 0.1
+	        echo buccaneer:$wifiPasswd | chpasswd
+	        sleep 0.1
+	        
+	        sed -i "s/^ssid=.*$/ssid=$ssid/" /etc/hostapd/hostapd.conf
+	        sed -i "s/^wpa_passphrase=.*$/wpa_passphrase=$wifiPasswd/" /etc/hostapd/hostapd.conf
+	
+		echo "Buccaneer hostname reset."
+		hostname $ssid # Temporarly changes to correct SSID on run time
+		echo $ssid > /etc/hostname # Permanently change after reboot.
+		sync
+	fi
+
+	while true; do
+	# Execute file
+	exec<$FIRMWARE_FILE
+	while read line
+	do
+		id="$( cut -d '_' -f 1 <<< "$line" )";
+		echo $id
+		sh $DEFAULT_LOCATION/$id/current/ensurestarted.sh 2>&1 &
+		done
+	sleep 20
+	done
+
+	exit 0
+else
+	echo "Post-boot Error."
+        /usr/bin/lightControl 3
+        exit 1
+fi

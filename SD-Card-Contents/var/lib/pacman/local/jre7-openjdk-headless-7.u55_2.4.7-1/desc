@@ -1,0 +1,52 @@
+%NAME%
+jre7-openjdk-headless
+
+%VERSION%
+7.u55_2.4.7-1
+
+%DESC%
+Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - Minimal Java runtime - needed for executing non GUI Java programs
+
+%URL%
+http://icedtea.classpath.org
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1397656727
+
+%INSTALLDATE%
+1398175183
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+46457856
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libjpeg-turbo
+lcms2
+nss
+ca-certificates-java
+
+%OPTDEPENDS%
+libcups: needed for Java Mauve support - libmawt.so
+fontconfig: needed for Java Mauve support - libmawt.so
+
+%CONFLICTS%
+openjdk6
+
+%PROVIDES%
+java-runtime-headless=7
+

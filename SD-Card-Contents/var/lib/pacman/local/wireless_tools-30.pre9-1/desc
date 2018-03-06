@@ -1,0 +1,33 @@
+%NAME%
+wireless_tools
+
+%VERSION%
+30.pre9-1
+
+%DESC%
+Tools allowing to manipulate the Wireless Extensions
+
+%URL%
+http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1391667789
+
+%INSTALLDATE%
+1398247610
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+377856
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+

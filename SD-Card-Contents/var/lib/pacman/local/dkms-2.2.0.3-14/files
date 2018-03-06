@@ -1,0 +1,34 @@
+%FILES%
+etc/
+etc/default/
+etc/default/dkms
+etc/dkms/
+etc/dkms/framework.conf
+usr/
+usr/bin/
+usr/bin/dkms
+usr/lib/
+usr/lib/dkms/
+usr/lib/dkms/common.postinst
+usr/lib/dkms/dkms_autoinstaller
+usr/lib/systemd/
+usr/lib/systemd/scripts/
+usr/lib/systemd/scripts/dkms
+usr/lib/systemd/system/
+usr/lib/systemd/system/dkms.service
+usr/share/
+usr/share/bash-completion/
+usr/share/bash-completion/completions/
+usr/share/bash-completion/completions/dkms
+usr/share/man/
+usr/share/man/man8/
+usr/share/man/man8/dkms.8.gz
+var/
+var/lib/
+var/lib/dkms/
+var/lib/dkms/dkms_dbversion
+
+%BACKUP%
+etc/dkms/framework.conf	aa2a3d054e3fb9c3fdd9f36bcbb1a1ce
+etc/default/dkms	33be2fbf1bcc1b3fb2f38d9e7eaa809d
+

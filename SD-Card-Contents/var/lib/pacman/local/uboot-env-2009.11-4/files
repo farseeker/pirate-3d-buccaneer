@@ -1,0 +1,11 @@
+%FILES%
+etc/
+etc/fw_env.config
+usr/
+usr/bin/
+usr/bin/fw_printenv
+usr/bin/fw_setenv
+
+%BACKUP%
+etc/fw_env.config	159f285467e910ba98696b92a311498e
+

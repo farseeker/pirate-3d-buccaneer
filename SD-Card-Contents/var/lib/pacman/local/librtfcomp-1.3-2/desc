@@ -1,0 +1,36 @@
+%NAME%
+librtfcomp
+
+%VERSION%
+1.3-2
+
+%DESC%
+SynCE librtfcomp library
+
+%URL%
+http://www.synce.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1383329880
+
+%INSTALLDATE%
+1398327651
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+80896
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+pyrex
+

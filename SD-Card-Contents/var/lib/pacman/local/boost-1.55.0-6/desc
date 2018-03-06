@@ -1,0 +1,41 @@
+%NAME%
+boost
+
+%VERSION%
+1.55.0-6
+
+%DESC%
+Free peer-reviewed portable C++ source libraries - Development
+
+%URL%
+http://www.boost.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1397861365
+
+%INSTALLDATE%
+1262307186
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+137104384
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+boost-libs=1.55.0
+
+%OPTDEPENDS%
+python: for python bindings
+python2: for python2 bindings
+boost-build: to use boost jam for building your project.
+

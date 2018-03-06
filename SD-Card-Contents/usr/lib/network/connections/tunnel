@@ -1,0 +1,27 @@
+# Contributed by: Kyle Fuller <inbox@kylefuller.co.uk>
+
+. "$SUBR_DIR/ip"
+
+declare -ag BindsToInterfaces
+
+tunnel_up() {
+    if is_interface "$Interface"; then
+        report_error "Interface '$Interface' already exists"
+        return 1
+    fi
+
+    ip tunnel add "$Interface" mode "$Mode" remote "$Remote" \
+        ${Local+local "$Local"}
+
+    bring_interface_up "$Interface"
+    ip_set
+}
+
+tunnel_down() {
+    ip_unset
+    bring_interface_down "$Interface"
+    ip tunnel del "$Interface"
+}
+
+
+# vim: ft=sh ts=4 et sw=4:

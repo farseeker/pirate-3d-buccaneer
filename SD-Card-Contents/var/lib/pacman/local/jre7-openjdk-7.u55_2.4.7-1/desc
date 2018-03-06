@@ -1,0 +1,52 @@
+%NAME%
+jre7-openjdk
+
+%VERSION%
+7.u55_2.4.7-1
+
+%DESC%
+Free Java environment based on OpenJDK 7.0 with IcedTea7 replacing binary plugs - Full Java runtime environment - needed for executing Java GUI and Webstart programs
+
+%URL%
+http://icedtea.classpath.org
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1397656778
+
+%INSTALLDATE%
+1398175209
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu6@archlinuxarm.org>
+
+%SIZE%
+562176
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+jre7-openjdk-headless
+xdg-utils
+hicolor-icon-theme
+
+%OPTDEPENDS%
+icedtea-web-java7: web browser plugin + Java Web Start
+alsa-lib: for basic sound support
+giflib: for gif format support
+libpulse: for advanced sound support
+gtk2: for the Gtk+ look and feel - desktop usage
+libxtst: linked in xawt/libmawt.so - desktop usage
+
+%CONFLICTS%
+openjdk6
+
+%PROVIDES%
+java-runtime=7
+

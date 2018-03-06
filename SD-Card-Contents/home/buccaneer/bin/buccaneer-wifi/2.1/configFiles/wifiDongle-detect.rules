@@ -1,0 +1,2 @@
+ACTION=="add", ATTRS{idVendor}=="1d6b", RUN+="/home/buccaneer/bin/buccaneer-wifi/current/staticWifiNames.sh"
+ACTION=="remove", ATTRS{idVendor}=="1d6b", RUN+="/home/buccaneer/bin/buccaneer-wifi/current/staticWifiNames.sh"

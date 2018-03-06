@@ -1,0 +1,17 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/fromrtf
+usr/bin/tortf
+usr/include/
+usr/include/rtfcomp/
+usr/include/rtfcomp/errors.h
+usr/include/rtfcomp/rtfcomp.h
+usr/lib/
+usr/lib/librtfcomp.so
+usr/lib/librtfcomp.so.0
+usr/lib/librtfcomp.so.0.0.0
+usr/lib/python2.7/
+usr/lib/python2.7/site-packages/
+usr/lib/python2.7/site-packages/pyrtfcomp.so
+

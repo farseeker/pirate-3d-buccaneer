@@ -1,0 +1,14 @@
+Sun Mar  4 17:18:00 MST 2018
+SSIDs are matched
+dongle5GHzPresent=0
+dongle2GHzPresent=2
+statePrev=0
+Both the dongles are 2.4GHz
+stateNow=2
+usb2GHz1:usb1  usb2GHz2:usb3
+usb2GHz1Interface:wlan0  usb2GHz2Interface:wlan1
+macAddr2GHz1:80:1f:02:f5:4e:b9  macAddr2GHz2:80:1f:02:f5:4e:fa
+Renaming 1st 2.4GHz(incase of two 2.4GHz) Interface to wifi0
+AP is re-initialized, because of dongle attach/detach
+Renaming 2nd 2.4GHz(incase of two 2.4GHz) Interface to wifi1
+Client is re-initialized, because of dongle attach/detach

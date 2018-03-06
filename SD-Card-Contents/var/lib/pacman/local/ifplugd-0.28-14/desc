@@ -1,0 +1,37 @@
+%NAME%
+ifplugd
+
+%VERSION%
+0.28-14
+
+%DESC%
+A daemon which brings up/down network interfaces upon cable insertion/removal.
+
+%URL%
+http://0pointer.de/lennart/projects/ifplugd
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1370560593
+
+%INSTALLDATE%
+1374805057
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+91136
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libdaemon
+bash
+

@@ -1,0 +1,36 @@
+%NAME%
+libdaemon
+
+%VERSION%
+0.14-2
+
+%DESC%
+Lightweight C library that eases the writing of UNIX daemons
+
+%URL%
+http://0pointer.de/lennart/projects/libdaemon/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1328546666
+
+%INSTALLDATE%
+1374805057
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+110592
+
+%REASON%
+1
+
+%LICENSE%
+LGPL
+
+%VALIDATION%
+md5
+

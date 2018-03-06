@@ -1,0 +1,10 @@
+[Unit]
+Description=Start buccaneer services
+
+[Service]
+ExecStart=/usr/bin/InitializePrinter
+RemainAfterExit=yes
+ExecStop=/usr/bin/KillAll
+
+[Install]
+WantedBy=default.target

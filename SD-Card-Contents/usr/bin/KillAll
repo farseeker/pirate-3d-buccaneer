@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Define the location of files for the script to initialize
+FIRMWARE_FILE="/home/buccaneer/.firmwareUpdater/firmwareupdater"
+DEFAULT_LOCATION="/home/buccaneer/bin"
+
+# Execute file
+exec<$FIRMWARE_FILE
+
+ while read line
+  do
+    id="$( cut -d '_' -f 1 <<< "$line" )"; 
+    echo $id
+    sh $DEFAULT_LOCATION/$id/current/ensurestopped.sh 2>&1 &
+ done
+
+exit 1

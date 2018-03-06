@@ -1,0 +1,42 @@
+%NAME%
+tomcat7
+
+%VERSION%
+7.0.53-1
+
+%DESC%
+Open source implementation of the Java Servlet 3.0 and JavaServer Pages 2.2 technologies
+
+%URL%
+http://tomcat.apache.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1396479110
+
+%INSTALLDATE%
+1398257721
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+11270144
+
+%LICENSE%
+APACHE
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+java-runtime>=7
+java-jsvc
+java-commons-daemon
+eclipse-ecj
+
+%OPTDEPENDS%
+tomcat-native: to allow optimal performance in production environments
+

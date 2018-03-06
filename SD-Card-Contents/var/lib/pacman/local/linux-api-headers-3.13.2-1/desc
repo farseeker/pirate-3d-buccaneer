@@ -1,0 +1,36 @@
+%NAME%
+linux-api-headers
+
+%VERSION%
+3.13.2-1
+
+%DESC%
+Kernel headers sanitized for use in userspace
+
+%URL%
+http://www.gnu.org/software/libc
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1392007334
+
+%INSTALLDATE%
+1393633325
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+xu0@archlinuxarm.org>
+
+%SIZE%
+3099648
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+

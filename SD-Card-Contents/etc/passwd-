@@ -1,0 +1,15 @@
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/bin/false
+daemon:x:2:2:daemon:/sbin:/bin/false
+mail:x:8:12:mail:/var/spool/mail:/bin/false
+ftp:x:14:11:ftp:/srv/ftp:/bin/false
+http:x:33:33:http:/srv/http:/bin/false
+uuidd:x:68:68:uuidd:/:/sbin/nologin
+dbus:x:81:81:dbus:/:/sbin/nologin
+nobody:x:99:99:nobody:/:/bin/false
+ntp:x:87:87:Network Time Protocol:/var/lib/ntp:/bin/false
+adnan:x:1000:1000::/home/adnan:/bin/bash
+dnsmasq:x:999:999:dnsmasq daemon:/:/sbin/nologin
+git:x:998:998:git daemon user:/:/bin/bash
+buccaneer:x:1002:1002::/home/buccaneer:/bin/bash
+tomcat7:x:71:71::/usr/share/tomcat7:/bin/false

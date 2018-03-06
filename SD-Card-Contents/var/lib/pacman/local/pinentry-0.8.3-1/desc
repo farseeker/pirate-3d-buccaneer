@@ -1,0 +1,44 @@
+%NAME%
+pinentry
+
+%VERSION%
+0.8.3-1
+
+%DESC%
+a collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol
+
+%URL%
+http://www.gnupg.org/aegypten2
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1368055240
+
+%INSTALLDATE%
+1374805050
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+268288
+
+%REASON%
+1
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+ncurses
+libcap>=2.16
+
+%OPTDEPENDS%
+gtk2: for gtk2 backend
+qt4: for qt4 backend
+

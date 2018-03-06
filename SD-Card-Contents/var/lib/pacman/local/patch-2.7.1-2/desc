@@ -1,0 +1,42 @@
+%NAME%
+patch
+
+%VERSION%
+2.7.1-2
+
+%DESC%
+A utility to apply patch files to original sources
+
+%URL%
+http://www.gnu.org/software/patch/patch.html
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1357148063
+
+%INSTALLDATE%
+1398328495
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+167936
+
+%GROUPS%
+base-devel
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+
+%OPTDEPENDS%
+ed: for patch -e functionality
+

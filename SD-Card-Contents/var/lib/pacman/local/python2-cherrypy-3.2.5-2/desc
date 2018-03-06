@@ -1,0 +1,36 @@
+%NAME%
+python2-cherrypy
+
+%VERSION%
+3.2.5-2
+
+%DESC%
+A pythonic, object-oriented web development framework
+
+%URL%
+http://www.cherrypy.org
+
+%ARCH%
+any
+
+%BUILDDATE%
+1396132509
+
+%INSTALLDATE%
+1398330646
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+3552256
+
+%LICENSE%
+BSD
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+python2
+

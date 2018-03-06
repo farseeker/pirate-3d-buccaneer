@@ -1,0 +1,40 @@
+%NAME%
+python2-numpy
+
+%VERSION%
+1.8.1-1
+
+%DESC%
+Scientific tools for Python
+
+%URL%
+http://www.numpy.org/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1396594577
+
+%INSTALLDATE%
+1398330513
+
+%PACKAGER%
+Arch Linux ARM Build System <builder+odroid1@archlinuxarm.org>
+
+%SIZE%
+15633408
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+lapack
+python2
+
+%OPTDEPENDS%
+python2-nose: testsuite
+

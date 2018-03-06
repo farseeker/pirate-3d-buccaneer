@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Define the location of files for the script to initialize
+FIRMWARE_FILE="/home/buccaneer/.firmwareUpdater/firmwareupdater"
+DEFAULT_LOCATION="/home/buccaneer/bin"
+password="password"
+ssid="Buccaneer-cubiesetup"
+loopCount=0
+
+
+echo root:$password | chpasswd
+sleep 0.1
+echo buccaneer:$password | chpasswd
+sleep 0.1
+
+#echo $ssid > /etc/hostname
+#reboot
+
+sh home/buccaneer/bin/buccaneer-wifi/1.3/ensurestarted.sh 2>&1 &
+
+exit 1
+
+while true; do
+
+        if [ $loopCount == "20" ]; then
+                echo "Post-boot Error."
+                /usr/bin/lightControl 3
+                exit 1
+        fi
+
+	buccaneerPrivKey=$(/usr/bin/readConfig)
+	#echo $buccaneerPrivKey
+
+	buccaneerPrivKeyPreamble=${buccaneerPrivKey:0:2}
+	#echo $buccaneerPrivKeyPreamble
+
+	if [ $buccaneerPrivKeyPreamble == "PK" ]; then
+		buccaneerPrivKey=${buccaneerPrivKey:4:(-1)}
+		#echo $buccaneerPrivKey
+		break
+	else
+		loopCount=$((loopCount+1))
+		sleep 0.1
+	fi	
+done
+
+java -jar /home/buccaneer/bin/key-derivator/current/key-derivator.jar $buccaneerPrivKey > /tmp/buccaneer.id
+
+if [ $? == "0" ]; then
+	/usr/bin/lightControl 4	
+
+	ssid=`cat /tmp/buccaneer.id | grep prettyId | awk '{print $2}'`
+	existing_ssid=`cat /etc/hostname`
+
+	if [ $ssid != $existing_ssid ]; then
+	        
+	        wifiPasswd=`cat /tmp/buccaneer.id | grep wifiPassword | awk '{print $2}'`
+	        #echo $wifiPasswd      
+		
+		### Uncomment next two lines for production code.
+	        echo root:$wifiPasswd | chpasswd
+	        sleep 0.1
+	        echo buccaneer:$wifiPasswd | chpasswd
+	        sleep 0.1
+	        
+	        sed -i "s/^ssid=.*$/ssid=$ssid/" /etc/hostapd/hostapd.conf
+	        sed -i "s/^wpa_passphrase=.*$/wpa_passphrase=$wifiPasswd/" /etc/hostapd/hostapd.conf
+	
+		echo "Buccaneer Reset."
+		echo $ssid > /etc/hostname
+		reboot
+	fi
+
+	while true; do
+	# Execute file
+	exec<$FIRMWARE_FILE
+	while read line
+	do
+		id="$( cut -d '_' -f 1 <<< "$line" )";
+		echo $id
+		sh $DEFAULT_LOCATION/$id/current/ensurestarted.sh 2>&1 &
+		done
+	sleep 20
+	done
+
+	exit 0
+else
+	echo "Post-boot Error."
+        /usr/bin/lightControl 3
+        exit 1
+fi

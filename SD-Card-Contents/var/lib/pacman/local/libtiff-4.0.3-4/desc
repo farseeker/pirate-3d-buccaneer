@@ -1,0 +1,45 @@
+%NAME%
+libtiff
+
+%VERSION%
+4.0.3-4
+
+%DESC%
+Library for manipulation of TIFF images
+
+%URL%
+http://www.remotesensing.org/libtiff/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1382573094
+
+%INSTALLDATE%
+1398175169
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+2391040
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+gcc-libs
+libjpeg
+zlib
+xz
+
+%OPTDEPENDS%
+freeglut: for using tiffgt
+

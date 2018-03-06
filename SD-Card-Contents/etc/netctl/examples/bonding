@@ -1,0 +1,6 @@
+Description='Bond Interface'
+Interface='bond0'
+Connection=bond
+BindsToInterfaces=(eth0 eth2)
+IP=static
+Address="10.0.0.1/8"

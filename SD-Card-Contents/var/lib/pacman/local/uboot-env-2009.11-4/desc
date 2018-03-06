@@ -1,0 +1,34 @@
+%NAME%
+uboot-env
+
+%VERSION%
+2009.11-4
+
+%DESC%
+fw_printenv/fw_setenv binaries
+
+%URL%
+
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1348581842
+
+%INSTALLDATE%
+1398189249
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+40960
+
+%LICENSE%
+GPL
+LGPL
+
+%VALIDATION%
+sha256
+

@@ -1,0 +1,9 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/jsvc
+usr/share/
+usr/share/man/
+usr/share/man/man1/
+usr/share/man/man1/JSVC.1.gz
+

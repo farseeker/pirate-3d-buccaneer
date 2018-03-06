@@ -1,0 +1,36 @@
+%NAME%
+libnl1
+
+%VERSION%
+1.1.4-1
+
+%DESC%
+Library for applications dealing with netlink sockets (Legacy version)
+
+%URL%
+http://www.infradead.org/~tgr/libnl/
+
+%ARCH%
+armv7h
+
+%BUILDDATE%
+1368401914
+
+%INSTALLDATE%
+1398192893
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+403456
+
+%LICENSE%
+GPL
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+

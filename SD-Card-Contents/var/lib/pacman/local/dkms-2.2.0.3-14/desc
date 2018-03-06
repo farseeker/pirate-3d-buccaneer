@@ -1,0 +1,47 @@
+%NAME%
+dkms
+
+%VERSION%
+2.2.0.3-14
+
+%DESC%
+Dynamic Kernel Modules System
+
+%URL%
+http://linux.dell.com/dkms/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1368502090
+
+%INSTALLDATE%
+1398228412
+
+%PACKAGER%
+Kevin Mihelich <kevin@archlinuxarm.org>
+
+%SIZE%
+234496
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+bash
+kmod
+gcc
+make
+patch
+
+%OPTDEPENDS%
+linux-headers: build modules against Arch kernel
+linux-lts-headers: build modules against LTS Arch kernel
+
